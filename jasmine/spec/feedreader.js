@@ -101,10 +101,10 @@ $(function() {
 
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
-        let feed1, feed2, feed3;
+        const entryElements = document.querySelectorAll('.feed .entry')
 
         beforeEach(function(done) {
-            loadFeed(0, function() {
+            loadFeed(1, function() {
                 done();
             });
         });
@@ -112,6 +112,11 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+        it('has new feed loaded by the loadFeed function', function() {
+            const entryElAfterReload = document.querySelectorAll('.feed .entry')
+            expect(entryElementsAfterReloading).not.toEqual(entryElements);
+        });
 
     });
 
