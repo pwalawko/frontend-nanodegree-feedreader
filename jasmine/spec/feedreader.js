@@ -115,7 +115,7 @@ $(function() {
 
         it('has new feed loaded by the loadFeed function', function() {
             const entryElAfterReload = document.querySelectorAll('.feed .entry')
-            expect(entryElementsAfterReloading).not.toEqual(entryElements);
+            expect(entryElAfterReload).not.toEqual(entryElements);
         });
 
     });
