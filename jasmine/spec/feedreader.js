@@ -21,7 +21,6 @@ $(function() {
             expect(element.length).not.toBe(0);
         }
 
-
         it('are defined', function() {
             definedAndNotEmpty(allFeeds);
         });
