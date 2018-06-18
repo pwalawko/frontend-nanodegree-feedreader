@@ -92,20 +92,23 @@ $(function() {
     describe('New Feed Selection', function() {
         /* The test for the new feed selection.
          */
-        const entryElements = document.querySelectorAll('.feed .entry')
-
         beforeEach(function(done) {
-            loadFeed(1, function() {
-                done();
+            loadFeed(0, function() {
+                prevFeedData = document.querySelectorAll('.feed .entry');
+
+                loadFeed(1, function() {
+                    newFeedData = document.querySelectorAll('.feed .entry');
+                    done();
+                });
             });
         });
 
         /* This test ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          */
-        it('has new feed loaded by the loadFeed function', function() {
-            const entryElAfterReload = document.querySelectorAll('.feed .entry')
-            expect(entryElAfterReload).not.toEqual(entryElements);
+        it('has new feed loaded by the loadFeed function', function(done) {
+            expect(prevFeedData).not.toBe(newFeedData);
+            done();
         });
 
     });
