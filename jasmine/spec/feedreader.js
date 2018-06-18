@@ -59,9 +59,9 @@ $(function() {
           */
         it('changes visibility when the menu icon is clicked', function() {
             menuIcon.click();
-            expect(body.className).toEqual('');
+            expect($('body').hasClass('')).toBe(true);
             menuIcon.click();
-            expect(body.className).toEqual('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
