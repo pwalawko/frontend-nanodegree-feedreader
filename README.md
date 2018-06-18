@@ -12,6 +12,11 @@ The app is built with the following code dependencies:
 1. ES6
 1. Jasmine
 
+## Installation
+
+1. Clone the project from GitHub
+1. Open the index.html file to check the feeds and test suites
+
 ## Contributing
 
 This repository is the project for Udacity Front-End Web Developer Nanodegree Program.
